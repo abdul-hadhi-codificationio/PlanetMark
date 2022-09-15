@@ -63,12 +63,7 @@ export default function SidebarWithHeader({ children }) {
       </Drawer>
       {/* mobilenav */}
       <MobileNav onOpen={onOpen} />
-      <Box
-        minH="100vh"
-        ml={{ base: 0, md: 60 }}
-        p="4"
-        bgColor={useColorModeValue('white', 'gray.800')}
-      >
+      <Box minH="100vh" ml={{ base: 0, md: 60 }} p="4">
         {children}
       </Box>
     </Box>

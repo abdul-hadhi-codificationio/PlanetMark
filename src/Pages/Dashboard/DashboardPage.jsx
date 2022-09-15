@@ -7,6 +7,7 @@ import {
   Image,
   Stack,
   Heading,
+  useColorModeValue,
 } from '@chakra-ui/react';
 
 const carbonEmission =
@@ -24,7 +25,7 @@ const labourEmission =
 const cleanEnergy =
   'https://images.unsplash.com/photo-1652588181034-99f1d31ea4e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80';
 
-export const Dashboard = () => {
+export default function Dashboard() {
   return (
     <Wrap spacing="30px" justify="center">
       <WrapItem>
@@ -34,6 +35,7 @@ export const Dashboard = () => {
             maxW={'330px'}
             w={'full'}
             boxShadow={'2xl'}
+            bg={useColorModeValue('white', 'gray.700')}
             rounded={'lg'}
             pos={'relative'}
             zIndex={1}
@@ -91,6 +93,7 @@ export const Dashboard = () => {
             p={6}
             maxW={'330px'}
             w={'full'}
+            bg={useColorModeValue('white', 'gray.700')}
             boxShadow={'2xl'}
             rounded={'lg'}
             pos={'relative'}
@@ -149,6 +152,7 @@ export const Dashboard = () => {
             p={6}
             maxW={'330px'}
             w={'full'}
+            bg={useColorModeValue('white', 'gray.700')}
             boxShadow={'2xl'}
             rounded={'lg'}
             pos={'relative'}
@@ -207,6 +211,7 @@ export const Dashboard = () => {
             p={6}
             maxW={'330px'}
             w={'full'}
+            bg={useColorModeValue('white', 'gray.700')}
             boxShadow={'2xl'}
             rounded={'lg'}
             pos={'relative'}
@@ -265,6 +270,7 @@ export const Dashboard = () => {
             p={6}
             maxW={'330px'}
             w={'full'}
+            bg={useColorModeValue('white', 'gray.700')}
             boxShadow={'2xl'}
             rounded={'lg'}
             pos={'relative'}
@@ -326,4 +332,4 @@ export const Dashboard = () => {
       </WrapItem>
     </Wrap>
   );
-};
+}
