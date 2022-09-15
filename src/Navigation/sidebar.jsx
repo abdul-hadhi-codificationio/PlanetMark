@@ -88,7 +88,12 @@ const SidebarContent = ({ onClose, ...rest }) => {
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
       {LinkItems.map(link => (
-        <NavItem key={link.name} icon={link.icon} route={link.route}>
+        <NavItem
+          key={link.name}
+          icon={link.icon}
+          route={link.route}
+          onClose={onClose}
+        >
           {link.name}
         </NavItem>
       ))}
@@ -96,12 +101,13 @@ const SidebarContent = ({ onClose, ...rest }) => {
   );
 };
 
-const NavItem = ({ icon, children, route, ...rest }) => {
+const NavItem = ({ onClose, icon, children, route, ...rest }) => {
   return (
     <Link
       to={route}
       style={{ textDecoration: 'none' }}
       _focus={{ boxShadow: 'none' }}
+      onClick={onClose}
     >
       <Flex
         align="center"
@@ -156,7 +162,6 @@ const MobileNav = ({ onOpen, ...rest }) => {
       <Text
         display={{ base: 'flex', md: 'none' }}
         fontSize="2xl"
-        fontFamily="monospace"
         fontWeight="bold"
       >
         PlanetMark
